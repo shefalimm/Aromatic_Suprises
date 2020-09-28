@@ -1,0 +1,124 @@
+<div class="text" style="background-color: rgb(5, 31, 66) ;">
+  <h3 style=" font-family: 'Brush Script MT'; font-size: 60px; color: azure; ">Aromatic Suprises </h3>
+
+    <form class="search-form" id="search-form" style="margin-left: 63%;">
+      <input type="text" class="searchbox" />
+    </form>
+
+</div>
+
+
+<nav class="navbar navbar-expand-sm navbar-dark navbar-custom ">
+  <div class="collapse navbar-collapse">
+    <ul class="navbar-nav ">
+      <li class="nav-item"  style="color: azure; font-size: 22px;"><a class="nav-link" routerLink="/home">Home</a></li><br>
+
+
+
+
+      <li class="nav-item dropdown" >
+        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style=" font-size: 22px;"> Fragrance </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <li class="dropdown-submenu" style="color: azure; font-size: 22px;">
+          <a class="dropdown-item dropdown-toggle">Candles</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" routerLink="/zodiac" style=" font-size: 22px;">Zodiac Candles</a></li>
+            
+              
+            </ul>
+
+            <div class="dropdown-divider"></div>
+          </li> 
+          <li class="dropdown-submenu">
+          <a class="dropdown-item dropdown-toggle" style=" font-size: 22px;">Bath Bombs</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" routerLink="/bracelet" style=" font-size: 22px;">Bracelet Bath Bombs</a></li>
+              <div class="dropdown-divider"></div>
+              <li><a class="dropdown-item" routerLink="/ring" style=" font-size: 22px;">Ring Bath Bombs</a></li>
+             
+            </ul>
+          </li>
+         </ul>
+      </li>     
+
+      <li class="nav-item"><a class="nav-link" routerLink="/blog" style=" font-size: 22px;">Blog</a></li><br>
+      <li class="nav-item"><a class="nav-link" routerLink="/photogallery" style="font-size: 22px;">Photo Gallery</a></li><br>
+      <li class="nav-item"><a class="nav-link" routerLink="/help" style="font-size: 22px;">Help</a></li><br>
+      <li class="nav-item"><a class="nav-link" routerLink="/contactus" style=" font-size: 22px;">Contact Us</a></li><br>
+      <li class="nav-item"><a class="nav-link" routerLink="/registration" style=" font-size: 22px;">My Account</a></li><br>
+     
+    </ul>
+  </div>
+</nav>
+
+
+
+<br>
+<br>
+<router-outlet></router-outlet>
+
+
+
+
+
+
+
+
+
+
+  <!-- Site footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-6">
+          <h6>About</h6>
+          <p class="text-justify">Aromatic_Suprises.com . Every candle is hand poured with a high quality soy wax blend grown from North American farmers.
+             We’ve chosen soy wax as it gives candles a cleaner and longer burn.Aromatic Suprises passionately captures the essence of creating scents designed to evoke memories and comfort. Working with top fragrance houses, we’ve created a unique blend of fragrances which will relax and rejuvenate.The Aromatic Suprises story began with a desire to create beautiful and natural candles with a memorable surprise. 
+            Life is about memories and we hope you will enjoy your candle.
+          </p>
+        </div>
+
+        <div class="col-xs-6 col-md-3" style="text-align: right;">
+          <h6>Categories</h6>
+          <ul class="footer-links">
+            <li><a routerLink="/zodiac">Zodiac Candles</a></li>
+            <li><a routerLink="/ring">Ring Bath Bombs</a></li>
+            <li><a routerLink="/bracelet">Bracelet Bath Bombs</a></li>
+          </ul>
+        </div>
+
+        <div class="col-xs-6 col-md-3" style="text-align: right;">
+          <h6>Quick Links</h6>
+          <ul class="footer-links">
+            <li><a routerLink="/about">About Us</a></li>
+            <li><a routerLink="/contactus">Contact Us</a></li>
+            <li><a routerLink="/photogallery">Photo Gallery</a></li>
+            <li><a routerLink="/blog">Blog</a></li>
+            <li><a href="https://goo.gl/maps/W1XqNZy95FTV34nL6">Map</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-sm-6 col-xs-12">
+          <p class="copyright-text">Copyright &copy; 2020 All Rights Reserved by 
+       <a href="#">Aromatic Suprises</a>.
+          </p>
+        </div>
+
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">    <!-- important link for social icons to be visible -->
+          <ul class="social-icons">
+            <li><a class="facebook" href="#"><i class="fa fa-facebook social"></i></a></li>
+            <li><a class="twitter" href="#"><i class="fa fa-twitter social"></i></a></li>
+            <li><a class="google" href="#"><i class="fa fa-google social"></i></a></li>
+            <li><a class="linkedin" href="#"><i class="fa fa-linkedin social"></i></a></li>  
+            <li><a class="instagram" href="#"><i class="fa fa-instagram social"></i></a></li>  
+          </ul>
+        </div>
+      </div>
+    </div>
+</footer>
+  
