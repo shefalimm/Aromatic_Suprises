@@ -1,8 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
-import { routes } from './app-routing.module';
+import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
+import { Routes, RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { BlogComponent } from './blog/blog.component';
@@ -21,6 +21,32 @@ import { BraceletComponent } from './bracelet/bracelet.component';
 
 
 import { AboutComponent } from './about/about.component';
+
+
+
+
+var myRoutes: Routes = [
+
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  {path:'home',component:HomeComponent},
+  {path:'fragrance',component:FragranceComponent},
+    {path:'Candles', component:CandlesComponent},
+      {path:'zodiac', component:ZodiacComponent},
+    {path:'bombs',component:BombsComponent},
+      {path:'bracelet', component:BraceletComponent},
+      {path:'ring', component:RingComponent},
+  {path:'registration',component:RegistrationComponent},
+  {path:'blog',component:BlogComponent},
+  {path:'photogallery',component:PhotogalleryComponent},
+  {path:'help',component:HelpComponent},
+  {path:'contactus',component:ContactusComponent},
+
+  {path:'about',component:AboutComponent}
+];
+
+
+
+
 
 
 @NgModule({
@@ -43,8 +69,9 @@ import { AboutComponent } from './about/about.component';
   imports: [
     BrowserModule,
     RouterModule,
-    routes,
-    FormsModule
+    AppRoutingModule,
+    FormsModule,
+    RouterModule.forRoot(myRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
