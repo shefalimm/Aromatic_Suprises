@@ -1,44 +1,50 @@
 
-.search-form {
-  height: 50px;
-  width: 35%;
- 
+.heading
+{
+  padding-left:0;
+  margin-bottom:0;
+  list-style:none
 }
 
-.searchbox {
-  width: 50px;
-  height: 50px;
-  font-size: 20px;
-  float: right;
-  border: 3px #ccc solid;
-  border-radius: 50%;
-  background: #fff;
-  /* LINK FOR SEARCH ICON
-   https://www.pinclipart.com/picdir/big/485-4851736_free-png-search-icon-search-icon-free-download.png */
-  background-image: url("https://www.pinclipart.com/picdir/big/485-4851736_free-png-search-icon-search-icon-free-download.png");
-  background-size: 35px;
-  background-repeat: no-repeat;
-  background-position: center center;
-  transition: all 0.5s ease-in-out, box-shadow 0.2s ease-in-out;
+.heading li
+{
+  display:inline-block;
+  margin-bottom:4px
 }
 
-.searchbox:hover {
-  cursor: pointer;
-  box-shadow: 0 0 10px 0 #7f7f7f;
+.heading a{
+  background-color:#eceeef;
+  color:#818a91;
+  font-size:16px;
+  display:inline-block;
+  line-height:44px;
+  width:44px;
+  height:44px;
+  text-align:center;
+  margin-right:8px;
+  border-radius:100%;
+  -webkit-transition:all .2s linear;
+  -o-transition:all .2s linear;
+  transition:all .2s linear
 }
 
-.searchbox:focus {
-  cursor: text;
-  width: 100%;
-  border-radius: 25px 25px 25px 25px;
-  outline: none;
-  text-indent: 15px;
-  background-position-x: 97%;
-  box-shadow: 0 0 10px 0 #7f7f7f;
+.heading a:active,.heading a:focus,.heading a:hover
+{
+  color:#fff;
+  background-color:#29aafe
 }
 
-
-
+.heading.size-sm a
+{
+  line-height:34px;
+  height:34px;
+  width:34px;
+  font-size:14px
+}
+.heading a.cart:hover
+{
+  background-color:rgb(8, 52, 109)
+}
 /*///////////////////////////////////////////////////NAVBAR/////////////////////////////////////////////////*/
 
 
