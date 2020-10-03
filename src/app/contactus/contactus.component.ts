@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-contactus',
@@ -6,10 +7,29 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contactus.component.css']
 })
 export class ContactusComponent implements OnInit {
+  contactUsForm: FormGroup;
+  submitted = false;
 
-  constructor() { }
+  constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
+    this.contactUsForm = this.formBuilder.group({
+      name:['', Validators.required],
+      email:['', Validators.required, Validators.email],
+      subject:['', Validators.required],
+      message:['', Validators.required]
+    })
+
   }
 
+  get f(){
+    return this.contactUsForm.controls;
+  }
+
+  onSubmit(){
+    this.submitted=true;
+    if(this.contactUsForm.invalid){
+      return;
+    }
+  }
 }

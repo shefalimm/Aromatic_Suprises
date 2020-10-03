@@ -1,12 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { BlogComponent } from './blog/blog.component';
 import { PhotogalleryComponent } from './photogallery/photogallery.component';
+import { LoginComponent } from './login/login.component';
 import { BombsComponent } from './bombs/bombs.component';
 import { CandlesComponent } from './candles/candles.component';
 import { ContactusComponent } from './contactus/contactus.component';
@@ -21,6 +22,7 @@ import { BraceletComponent } from './bracelet/bracelet.component';
 
 
 import { AboutComponent } from './about/about.component';
+
 
 
 
@@ -40,7 +42,7 @@ var myRoutes: Routes = [
   {path:'photogallery',component:PhotogalleryComponent},
   {path:'help',component:HelpComponent},
   {path:'contactus',component:ContactusComponent},
-
+  {path:'login',component:LoginComponent},
   {path:'about',component:AboutComponent}
 ];
 
@@ -64,13 +66,15 @@ var myRoutes: Routes = [
     RingComponent,
     BraceletComponent,
     AboutComponent,
-    PhotogalleryComponent
+    PhotogalleryComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     RouterModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(myRoutes)
   ],
   providers: [],
