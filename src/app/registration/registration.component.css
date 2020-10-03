@@ -1,6 +1,6 @@
 .mb-4{
   border-radius: 5px;
-  background-color: hsla(195, 100%, 90%, 0.3);
+  background-color: rgb(5, 31, 66) ;
   padding: 20px;
 }
 
@@ -8,7 +8,7 @@
 
 .form-signin , .form-signup , .card-body{
     border-radius: 5px;
-    background-color: hsla(195, 100%, 70%, 0.3);
+    background-color: #f2f2f2;
    
     padding: 20px;
     align-content: center;

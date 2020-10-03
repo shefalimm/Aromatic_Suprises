@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
-  selector: 'app-contactus',
-  templateUrl: './contactus.component.html',
+  selector:'app-contactus',
+  templateUrl:'./contactus.component.html',
   styleUrls: ['./contactus.component.css']
 })
 export class ContactusComponent implements OnInit {
@@ -31,5 +31,7 @@ export class ContactusComponent implements OnInit {
     if(this.contactUsForm.invalid){
       return;
     }
+    alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.contactUsForm.value, null, 4));
+   
   }
 }
