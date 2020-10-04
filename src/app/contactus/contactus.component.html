@@ -28,7 +28,7 @@
             <div class="col-md-6">
               <div class="md-form mb-0">
                 <label for="name">Your name</label>
-                <input type="text" id="name" name="name" class="form-control" formControlName="name" [ngClass]="{ 'is-invalid': submitted && f.name.errors }" />
+                <input class="form-control" formControlName="name" [ngClass]="{ 'is-invalid': submitted && f.name.errors }" />
                 <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
                 <div style="color: red" *ngIf="f.name.errors.required ">Name is required </div>
                 </div>
@@ -41,7 +41,7 @@
             <div class="col-md-6">
               <div class="md-form mb-0">
                 <label for="email" class="">Your email</label>
-                <input type="text" id="email" name="email" class="form-control" formControlName="email" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+                <input class="form-control" formControlName="email" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
                 <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
                 <div style="color: red" *ngIf="f.email.errors.required">Email is required</div>
                 <div style="color: red" *ngIf="f.email.errors.email">Email must be a valid email address</div>
@@ -59,7 +59,7 @@
             <div class="col-md-12">
               <div class="md-form mb-0">
                 <label for="subject" class="">Subject</label>
-                <input type="text" id="subject" name="subject" class="form-control" formControlName="subject" [ngClass]="{ 'is-invalid': submitted && f.subject.errors }" />
+                <input  class="form-control" formControlName="subject" [ngClass]="{ 'is-invalid': submitted && f.subject.errors }" />
                 <div *ngIf="submitted && f.subject.errors" class="invalid-feedback">
                 <div style="color: red" *ngIf="f.subject.errors.required"> This field is required</div>
                 </div>
@@ -78,7 +78,7 @@
 
               <div class="md-form">
                 <label for="message">Your message</label>
-                <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"
+                <textarea  rows="2" class="form-control md-textarea"
                   formControlName="message"  [ngClass]="{ 'is-invalid': submitted && f.message.errors }" ></textarea>
                   <div *ngIf="submitted && f.message.errors" class="invalid-feedback">
                   <div style="color: red" *ngIf="f.message.errors.required"> Message is required</div>

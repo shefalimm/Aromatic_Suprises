@@ -3,6 +3,10 @@ import { NgModule} from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
+import {HttpClientModule} from '@angular/common/http';
+import { ApiService } from './service/api.service';
+import { ApiService2} from './service/api.service2';
+
 
 import { AppComponent } from './app.component';
 import { BlogComponent } from './blog/blog.component';
@@ -75,9 +79,12 @@ var myRoutes: Routes = [
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    RouterModule.forRoot(myRoutes)
+    RouterModule.forRoot(myRoutes),    
+    HttpClientModule
+   
   ],
-  providers: [],
+  providers: [ApiService,ApiService2],
+  
   bootstrap: [AppComponent]
 })
 export class AppModule { }

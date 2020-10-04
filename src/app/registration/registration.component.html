@@ -15,7 +15,7 @@
     <div class="col">
      <label>First Name</label>
      <input class="form-control" formControlName="fname" [ngClass]="{ 'is-invalid': submitted && f.fname.errors }" />
-    <div *ngIf="submitted && f.fname.errors" class="invalid-feedback">
+    <div *ngIf="submitted && f.fname.errors " class="invalid-feedback">
     <div style="color: red" *ngIf="f.fname.errors.required ">First Name is required </div>
     </div>
   </div>
@@ -23,7 +23,7 @@
     <div class=" col">
      <label>Last Name</label>
      <input  class="form-control" formControlName="lname" [ngClass]="{ 'is-invalid': submitted && f.lname.errors }" />
-    <div *ngIf="submitted && f.lname.errors" class="invalid-feedback">
+    <div *ngIf="submitted && f.lname.errors " class="invalid-feedback">
     <div style="color: red" *ngIf="f.lname.errors.required ">Last Name is required </div>
     </div>
    
@@ -40,10 +40,11 @@
     <input class="form-control" type="text" placeholder="123-45-678-90" formControlName="mnumber" [ngClass]="{ 'is-invalid': submitted && f.mnumber.errors }" />
     <div *ngIf="submitted && f.mnumber.errors" class="invalid-feedback">
     <div style="color: red" *ngIf="f.mnumber.errors.required">Mobile number is required</div>
+    <div style="color: red" *ngIf="f.mnumber.errors.pattern">Mobile number pattern required</div>
+    <div style="color: red" *ngIf="f.mnumber.errors.minlength">Mobile number must be at least 10 digits</div>
     </div>
 
-    <div class="row">
-    <div class="col">
+    
      <label >Gender</label>
      <select class="form-control" formControlName="gender" [ngClass]="{ 'is-invalid': submitted && f.gender.errors }">
       <option selected>Male</option>
@@ -54,20 +55,13 @@
       <div *ngIf="f.gender.errors.required">Title is required</div>
   </div>
      
-   </div>
-   <div class="col">
-    <label >Birthdate</label>
-    <input  class="form-control" formControlName="bday" [ngClass]="{ 'is-invalid': submitted && f.bday.errors }" />
-    <div *ngIf="submitted && f.bday.errors" class="invalid-feedback">
-    <div style="color: red" *ngIf="f.bday.errors.required ">Birthday is required </div>
-    </div>
+   
     
-   </div>
-   </div>
+   
    <label >Address</label>
    <input class="form-control" formControlName="address" [ngClass]="{ 'is-invalid': submitted && f.address.errors }" />
     <div *ngIf="submitted && f.address.errors" class="invalid-feedback">
-    <div style="color: red" *ngIf="f.address.errors.required">Mobile number is required</div>
+    <div style="color: red" *ngIf="f.address.errors.required">Address is required</div>
     </div>
    
   
@@ -82,7 +76,7 @@
       
           <br>
    <button class="btn btn-primary">Register</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-   <a routerLink="/login">Already have an account??? Login</a>
+   <a routerLink="/login" class="login_registration">Already have an account??? Login</a>
    <br>
 </form>
 <br>
