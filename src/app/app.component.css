@@ -264,17 +264,6 @@ nav>div>ul>li{
   background-color:#d42870
 }
 
-@media (max-width:767px)
-{
-  .social-icons li.title
-  {
-    display:block;
-    margin-right:0;
-    font-weight:600
-  }
-}
-
-
 /*////////////////////////////////////////////////////////////*/
 
 

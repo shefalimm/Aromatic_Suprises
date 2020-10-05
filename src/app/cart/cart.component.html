@@ -1,22 +1,45 @@
-
-<div class="alert alert-success" *ngIf="products.length>0; else empty">
-    <p *ngFor="let product of products" style="font-size: 20px; font-weight: 500;">
-        Name:{{product.name}}
-        <br/>
-        Quantity:{{product.quantity}}
-        <br/>
-        Price: Rs.{{product.price}}
-        <br/>
-        <img class="img" [src]="product.img" alt="No Image"/>
-        <br/>
-        {{product.price*product.quantity}}
-        
-    </p>
-    <hr>
-    <p style="font-size: 20px;font-weight: 500;">Total Price: Rs.{{grandTotal}}</p>
-    </div>
-    <ng-template #empty>
-        <p style=" font-family: 'Brush Script MT'; font-size: 60px; color: rgb(5, 31, 66); text-align: center;">Your cart is empty </p>
+<div style="background-color: rgb(5, 42, 90)">
+    <br><br>
+<div class="container">
+    
+    <div  style="background-color: rgb(5, 31, 66) ; color:azure; padding: 30px;
+    border-radius: 5px;" *ngIf="products.length>0; else empty">
+    <h2 style="text-align: center; color: azure;font-family: 'Brush Script MT';font-size: 60px">Cart</h2>
+    <br>
+<div class="row" *ngFor="let product of products" style="font-size: 20px; margin-left: 70px; font-weight: 500;">
+    
+    <div class="col"  >
         <br>
-        <p style=" font-family: 'Brush Script MT';  font-size: 55px; color: rgb(5, 31, 66); text-align: center;">Add your preferred Zodiac Candles </p>
+        <br>
+        Name:{{product.name}}
+        <br>
+        Quantity:{{product.quantity}}
+        <br>
+        Price: Rs.{{product.price}}
+    </div>
+    <div class="col"  >
+        <img class="img" [src]="product.img" alt="No Image"/>
+        <br>
+        <br>
+    </div>
+    <div class="col" >
+        <br>
+        <br>
+        <br>
+      Rs.{{product.price*product.quantity}} 
+    </div>
+    
+</div>
+</div>
+</div>
+    <hr>
+    <p style="font-size: 20px;font-weight: 500;color:azure;margin-left: 45%">Total Price: Rs.{{grandTotal}}</p>
+    <br>
+    </div>
+    <br>
+    <br>
+    <ng-template #empty>
+        <p style=" font-family: 'Brush Script MT'; font-size: 60px; color: azure; text-align: center;">Your cart is empty </p>
+        <br>
+        <p style=" font-family: 'Brush Script MT';  font-size: 55px; color:azure; text-align: center;">Add your preferred Zodiac Candles </p>
     </ng-template>
