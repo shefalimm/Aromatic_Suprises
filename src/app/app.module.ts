@@ -6,6 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 import {HttpClientModule} from '@angular/common/http';
 import { ApiService } from './service/api.service';
 import { ApiService2} from './service/api.service2';
+import { ApiService3} from './service/api.service3';
 import { ProductService } from './service/productServices';
 
 import { AppComponent } from './app.component';
@@ -87,7 +88,7 @@ var myRoutes: Routes = [
     HttpClientModule,
    
   ],
-  providers: [ApiService,ApiService2,ProductService],
+  providers: [ApiService,ApiService2,ProductService,ApiService3],
   
   bootstrap: [AppComponent]
 })
