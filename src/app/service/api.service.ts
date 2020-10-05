@@ -26,38 +26,7 @@ export class ApiService {
       )
   }
 
-  // Get all registration
-  getRegistration() {
-    return this.http.get(`${this.baseUri}`);
-  }
-
-  // Get registration
-  getRegistartion(id): Observable<any> {
-    let url = `${this.baseUri}/read/${id}`;
-    return this.http.get(url, {headers: this.headers}).pipe(
-      map((res: Response) => {
-        return res || {}
-      }),
-      catchError(this.errorMgmt)
-    )
-  }
-
-  // Update registration
-  updateRegistration(id, data): Observable<any> {
-    let url = `${this.baseUri}/update/${id}`;
-    return this.http.put(url, data, { headers: this.headers }).pipe(
-      catchError(this.errorMgmt)
-    )
-  }
-
-  // Delete registration
-  deleteRegistration(id): Observable<any> {
-    let url = `${this.baseUri}/delete/${id}`;
-    return this.http.delete(url, { headers: this.headers }).pipe(
-      catchError(this.errorMgmt)
-    )
-  }
-
+  
   // Error handling 
   errorMgmt(error: HttpErrorResponse) {
     let errorMessage = '';

@@ -26,37 +26,6 @@ export class ApiService2 {
       )
   }
 
-  // Get all Contactus
-  getContactus() {
-    return this.http.get(`${this.baseUri}`);
-  }
-
-  // Get Contactus
-  getContactuss(id): Observable<any> {
-    let url = `${this.baseUri}/read/${id}`;
-    return this.http.get(url, {headers: this.headers}).pipe(
-      map((res: Response) => {
-        return res || {}
-      }),
-      catchError(this.errorMgmt)
-    )
-  }
-
-  // Update Contactus
-  updateContactus(id, data): Observable<any> {
-    let url = `${this.baseUri}/update/${id}`;
-    return this.http.put(url, data, { headers: this.headers }).pipe(
-      catchError(this.errorMgmt)
-    )
-  }
-
-  // Delete Contactus
-  deleteContactus(id): Observable<any> {
-    let url = `${this.baseUri}/delete/${id}`;
-    return this.http.delete(url, { headers: this.headers }).pipe(
-      catchError(this.errorMgmt)
-    )
-  }
 
   // Error handling 
   errorMgmt(error: HttpErrorResponse) {

@@ -6,12 +6,13 @@ import { Routes, RouterModule } from '@angular/router';
 import {HttpClientModule} from '@angular/common/http';
 import { ApiService } from './service/api.service';
 import { ApiService2} from './service/api.service2';
-
+import { ProductService } from './service/productServices';
 
 import { AppComponent } from './app.component';
 import { BlogComponent } from './blog/blog.component';
 import { PhotogalleryComponent } from './photogallery/photogallery.component';
 import { LoginComponent } from './login/login.component';
+import { CartComponent } from './cart/cart.component';
 import { BombsComponent } from './bombs/bombs.component';
 import { CandlesComponent } from './candles/candles.component';
 import { ContactusComponent } from './contactus/contactus.component';
@@ -26,6 +27,7 @@ import { BraceletComponent } from './bracelet/bracelet.component';
 
 
 import { AboutComponent } from './about/about.component';
+
 
 
 
@@ -47,7 +49,8 @@ var myRoutes: Routes = [
   {path:'help',component:HelpComponent},
   {path:'contactus',component:ContactusComponent},
   {path:'login',component:LoginComponent},
-  {path:'about',component:AboutComponent}
+  {path:'about',component:AboutComponent},
+  {path:'cart',component:CartComponent}
 ];
 
 
@@ -71,7 +74,8 @@ var myRoutes: Routes = [
     BraceletComponent,
     AboutComponent,
     PhotogalleryComponent,
-    LoginComponent 
+    LoginComponent,
+    CartComponent 
   ],
   imports: [
     BrowserModule,
@@ -80,10 +84,10 @@ var myRoutes: Routes = [
     FormsModule,
     ReactiveFormsModule,
     RouterModule.forRoot(myRoutes),    
-    HttpClientModule
+    HttpClientModule,
    
   ],
-  providers: [ApiService,ApiService2],
+  providers: [ApiService,ApiService2,ProductService],
   
   bootstrap: [AppComponent]
 })

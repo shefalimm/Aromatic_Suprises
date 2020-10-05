@@ -1,0 +1,22 @@
+
+<div class="alert alert-success" *ngIf="products.length>0; else empty">
+    <p *ngFor="let product of products" style="font-size: 20px; font-weight: 500;">
+        Name:{{product.name}}
+        <br/>
+        Quantity:{{product.quantity}}
+        <br/>
+        Price: Rs.{{product.price}}
+        <br/>
+        <img class="img" [src]="product.img" alt="No Image"/>
+        <br/>
+        {{product.price*product.quantity}}
+        
+    </p>
+    <hr>
+    <p style="font-size: 20px;font-weight: 500;">Total Price: Rs.{{grandTotal}}</p>
+    </div>
+    <ng-template #empty>
+        <p style=" font-family: 'Brush Script MT'; font-size: 60px; color: rgb(5, 31, 66); text-align: center;">Your cart is empty </p>
+        <br>
+        <p style=" font-family: 'Brush Script MT';  font-size: 55px; color: rgb(5, 31, 66); text-align: center;">Add your preferred Zodiac Candles </p>
+    </ng-template>
