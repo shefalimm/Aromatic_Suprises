@@ -1,45 +1,46 @@
-<div style="background-color: rgb(5, 42, 90)">
-    <br><br>
-<div class="container">
-    
-    <div  style="background-color: rgb(5, 31, 66) ; color:azure; padding: 30px;
-    border-radius: 5px;" *ngIf="products.length>0; else empty">
-    <h2 style="text-align: center; color: azure;font-family: 'Brush Script MT';font-size: 60px">Cart</h2>
-    <br>
-<div class="row" *ngFor="let product of products" style="font-size: 20px; margin-left: 70px; font-weight: 500;">
-    
-    <div class="col"  >
+<div class="heading"> <h2 style="text-align: center; color: azure;font-family: 'Brush Script MT';font-size: 60px">Cart</h2>
+    <div class="row">
+    <div class="col-75">
+    <div class="container"> 
+    <div class="row">
+        
+           
+    <article  *ngFor="let product of products" class="col-md-4 col-lg-3" >
+      
+      <div class="card-content" style="color:azure">
+                
+                    
+                 
+                  <img class="spectrum1" [src]="product.img"  alt="no-image">
+                 
+                  <h5  class="spectrum-h2">Name: {{product.name}}</h5>
+
+                    <p >Quantity: {{product.quantity}}</p>
+                    <p class="text-align:right">Price: Rs{{product.price}}</p>
+                
+           
+           <p><strong>Total Price:</strong>{{product.price*product.quantity}} </p>
+            
+        </div>
+          </article>
+          
+          </div>
+          </div>
+          <div>
+        </div>
+        <br/>
+        <br/>
+            <div class="col-25">
+                <div class="container">
+               <h4 style="color:azure">Cart  <span class="price" style="color:azure"><i class="fa fa-shopping-cart" style="color:azure"></i> </span></h4>
+               <p style="color:azure" *ngFor="let product of products">{{product.name}} <span class="price">Rs.{{product.price*product.quantity}}</span></p>
+               
+               <hr>
+               <p style="color:azure">Total <span class="price" style="color:azure"><b>{{grandTotal}}</b></span></p>
+               </div>
+            </div> 
+        </div>
+        
         <br>
         <br>
-        Name:{{product.name}}
-        <br>
-        Quantity:{{product.quantity}}
-        <br>
-        Price: Rs.{{product.price}}
-    </div>
-    <div class="col"  >
-        <img class="img" [src]="product.img" alt="No Image"/>
-        <br>
-        <br>
-    </div>
-    <div class="col" >
-        <br>
-        <br>
-        <br>
-      Rs.{{product.price*product.quantity}} 
-    </div>
-    
-</div>
-</div>
-</div>
-    <hr>
-    <p style="font-size: 20px;font-weight: 500;color:azure;margin-left: 45%">Total Price: Rs.{{grandTotal}}</p>
-    <br>
-    </div>
-    <br>
-    <br>
-    <ng-template #empty>
-        <p style=" font-family: 'Brush Script MT'; font-size: 60px; color: azure; text-align: center;">Your cart is empty </p>
-        <br>
-        <p style=" font-family: 'Brush Script MT';  font-size: 55px; color:azure; text-align: center;">Add your preferred Zodiac Candles </p>
-    </ng-template>
+
