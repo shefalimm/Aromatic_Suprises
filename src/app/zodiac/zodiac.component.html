@@ -1,3 +1,37 @@
+
+<h2 style="text-align: center; color:rgb(5, 31, 66);font-family: 'Brush Script MT';font-size: 60px">Zodiac Candles </h2>
+<br>
+
+
+
+
+<div class="container">
+
+<div class="row">
+    <div class="col-md-3 col-sm-6" *ngFor="let product of products">
+        <div class="product-grid6">
+            <div class="product-image6">
+                <a href="#">
+                    <img class="pic-1" [src]="product.img">
+                </a>
+            </div>
+            <div class="product-content">
+                <h3 class="title"><a href="#">{{product.name}}</a></h3>
+                <div class="price">Rs.{{product.price}}
+                    <a role="button" (click)="buy(product.id)"  data-tip="Add to Cart"><i class="fa fa-shopping-cart fa-lg" style="text-align: right;"></i></a>  
+                </div>
+            </div>
+        </div>
+    </div >
+</div>
+
+</div>
+
+<hr>
+
+
+
+
 <h2 style="text-align: center; color:rgb(5, 31, 66);font-family: 'Brush Script MT';font-size: 60px">Zodiac Candles </h2>
     <br>
 <div class="container">
@@ -157,34 +191,7 @@
 
 </div>
 
-<hr>
-<h2 style="text-align: center; color:rgb(5, 31, 66);font-family: 'Brush Script MT';font-size: 60px">Add to cart </h2>
-    <br>
-
-
-
-
-<div class="container">
-   
-    <div class="row">
-        <div class="col-md-3 col-sm-6" *ngFor="let product of products">
-            <div class="product-grid6">
-                <div class="product-image6">
-                    <a href="#">
-                        <img class="pic-1" [src]="product.img">
-                    </a>
-                </div>
-                <div class="product-content">
-                    <h3 class="title"><a href="#">{{product.name}}</a></h3>
-                    <div class="price">Rs.{{product.price}}
-                        <a role="button" (click)="buy(product.id)"  data-tip="Add to Cart"><i class="fa fa-shopping-cart fa-lg" style="text-align: right;"></i></a>  
-                    </div>
-                </div>
-            </div>
-        </div >
-    </div>
-
-</div>
+<br>
 
 
 

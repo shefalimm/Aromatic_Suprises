@@ -1,3 +1,4 @@
+
 <div class="heading"> <h2 style="text-align: center; color: azure;font-family: 'Brush Script MT';font-size: 60px">Cart</h2>
     <div class="row">
     <div class="col-75">
@@ -8,11 +9,9 @@
     <article  *ngFor="let product of products" class="col-md-4 col-lg-3" >
       
       <div class="card-content" style="color:azure">
-                
-                    
-                 
+                      
                   <img class="spectrum1" [src]="product.img"  alt="no-image">
-                 
+                 <br>
                   <h5  class="spectrum-h2">Name: {{product.name}}</h5>
 
                     <p >Quantity: {{product.quantity}}</p>
@@ -32,7 +31,9 @@
         <br/>
             <div class="col-25">
                 <div class="container">
+                  <br>
                <h4 style="color:azure">Cart  <span class="price" style="color:azure"><i class="fa fa-shopping-cart" style="color:azure"></i> </span></h4>
+               <hr>
                <p style="color:azure" *ngFor="let product of products">{{product.name}} <span class="price">Rs.{{product.price*product.quantity}}</span></p>
                
                <hr>
@@ -41,6 +42,4 @@
             </div> 
         </div>
         
-        <br>
-        <br>
 
